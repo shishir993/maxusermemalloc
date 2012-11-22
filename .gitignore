@@ -1,0 +1,7 @@
+Debug
+Debug/*
+Release
+Release/*
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user

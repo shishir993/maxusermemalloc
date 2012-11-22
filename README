@@ -1,0 +1,20 @@
+-----------------
+*MaxUserMemAlloc*
+-----------------
+Test how much memory a userland program can allocate for itself using malloc(). The program allocates as much memory as possible. It then waits for the user to enter the 'x' character. So the allocated memory is not released until the program exits. Run multiple instances of this program and you will literally freeze your system since there will be almost no memory space left. Even mouse movements slow down to a crawl!
+
+The program by allocating chunks of 500MB each. When a malloc() fails, it tries to allocate half as much as was tried in the previous round. This continues until size becomes zero or nTries < maxTries. By default maxTries will be set to 200. You can override this by providing the number as a command line argument.
+
+Please feel free to reuse code from this project. Kindly include a reference to me in your code. :)
+
+-------
+*USAGE*
+-------
+usage: .\MaxUserMemAlloc.exe <numTries>
+	
+---------
+*CONTACT*
+---------
+* Shishir Prasad *
+- shishir89@gmail.com
+- www.shishirprasad.net
